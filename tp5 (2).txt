@@ -1,0 +1,150 @@
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\mongodb-win32-x86_64-2008plus-2.6.4\mongodb-win32-x86_64-2008plus-2.6.4\bin>cd C:\mongodb-win32-x86_64-2008plus-2.6.4\mongodb-win32-x86_64-2008plus-2.6.4\bin
+
+C:\mongodb-win32-x86_64-2008plus-2.6.4\mongodb-win32-x86_64-2008plus-2.6.4\bin>mongod.exe --dbpath C:\data\db
+2025-11-25T23:39:41.295-0800 [initandlisten] MongoDB starting : pid=9660 port=27017 dbpath=C:\data\db 64-bit host=DESKTOP-KRV8RFU
+2025-11-25T23:39:41.295-0800 [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2025-11-25T23:39:41.296-0800 [initandlisten] db version v2.6.4
+2025-11-25T23:39:41.296-0800 [initandlisten] git version: 3a830be0eb92d772aa855ebb711ac91d658ee910
+2025-11-25T23:39:41.296-0800 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2025-11-25T23:39:41.296-0800 [initandlisten] allocator: system
+2025-11-25T23:39:41.297-0800 [initandlisten] options: { storage: { dbPath: "C:\data\db" } }
+2025-11-25T23:39:41.302-0800 [initandlisten] journal dir=C:\data\db\journal
+2025-11-25T23:39:41.302-0800 [initandlisten] recover : no journal files present, no recovery needed
+2025-11-25T23:39:41.398-0800 [initandlisten] waiting for connections on port 27017
+2025-11-25T23:40:13.999-0800 [initandlisten] connection accepted from 127.0.0.1:59011 #1 (1 connection now open)
+2025-11-25T23:40:41.532-0800 [clientcursormon] mem (MB) res:38 virt:4407
+2025-11-25T23:40:41.532-0800 [clientcursormon]  mapped (incl journal view):160
+2025-11-25T23:40:41.533-0800 [clientcursormon]  connections:1
+2025-11-25T23:42:27.453-0800 [FileAllocator] allocating new datafile C:\data\db\info.ns, filling with zeroes...
+2025-11-25T23:42:27.454-0800 [FileAllocator] creating directory C:\data\db\_tmp
+2025-11-25T23:42:27.459-0800 [FileAllocator] done allocating datafile C:\data\db\info.ns, size: 16MB,  took 0.003 secs
+2025-11-25T23:42:27.479-0800 [FileAllocator] allocating new datafile C:\data\db\info.0, filling with zeroes...
+2025-11-25T23:42:27.481-0800 [FileAllocator] done allocating datafile C:\data\db\info.0, size: 64MB,  took 0 secs
+2025-11-25T23:42:27.495-0800 [conn1] build index on: info.produits properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "info.produits" }
+2025-11-25T23:42:27.495-0800 [conn1]     added index to empty collection
+2025-11-25T23:42:41.851-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-25T23:42:41.851-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-25T23:42:41.851-0800 [clientcursormon]  connections:1
+2025-11-25T23:47:42.616-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-25T23:47:42.616-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-25T23:47:42.620-0800 [clientcursormon]  connections:1
+2025-11-25T23:52:43.302-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-25T23:52:43.302-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-25T23:52:43.303-0800 [clientcursormon]  connections:1
+2025-11-25T23:57:43.868-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-25T23:57:43.869-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-25T23:57:43.870-0800 [clientcursormon]  connections:1
+2025-11-26T00:02:44.558-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-26T00:02:44.561-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:02:44.574-0800 [clientcursormon]  connections:1
+2025-11-26T00:07:45.223-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-26T00:07:45.223-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:07:45.226-0800 [clientcursormon]  connections:1
+2025-11-26T00:12:45.874-0800 [clientcursormon] mem (MB) res:38 virt:4565
+2025-11-26T00:12:45.876-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:12:45.883-0800 [clientcursormon]  connections:1
+2025-11-26T00:17:46.633-0800 [clientcursormon] mem (MB) res:23 virt:4565
+2025-11-26T00:17:46.634-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:17:46.637-0800 [clientcursormon]  connections:1
+2025-11-26T00:22:47.336-0800 [clientcursormon] mem (MB) res:12 virt:4565
+2025-11-26T00:22:47.339-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:22:47.344-0800 [clientcursormon]  connections:1
+2025-11-26T00:27:47.950-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T00:27:47.952-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:27:47.964-0800 [clientcursormon]  connections:1
+2025-11-26T00:46:43.394-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T00:46:43.394-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T00:46:43.394-0800 [clientcursormon]  connections:1
+2025-11-26T01:49:12.255-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T01:49:12.255-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T01:49:12.255-0800 [clientcursormon]  connections:1
+2025-11-26T01:54:13.043-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T01:54:13.043-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T01:54:13.044-0800 [clientcursormon]  connections:1
+2025-11-26T04:08:32.127-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:08:32.127-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:08:32.130-0800 [clientcursormon]  connections:1
+2025-11-26T04:13:32.911-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:13:32.911-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:13:32.912-0800 [clientcursormon]  connections:1
+2025-11-26T04:18:33.667-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:18:33.669-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:18:33.671-0800 [clientcursormon]  connections:1
+2025-11-26T04:23:34.419-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:23:34.419-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:23:34.419-0800 [clientcursormon]  connections:1
+2025-11-26T04:28:35.243-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:28:35.249-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:28:35.249-0800 [clientcursormon]  connections:1
+2025-11-26T04:33:36.187-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:33:36.189-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:33:36.191-0800 [clientcursormon]  connections:1
+2025-11-26T04:38:36.815-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:38:36.815-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:38:36.816-0800 [clientcursormon]  connections:1
+2025-11-26T04:43:37.482-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:43:37.483-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:43:37.488-0800 [clientcursormon]  connections:1
+2025-11-26T04:48:38.155-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T04:48:38.157-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T04:48:38.157-0800 [clientcursormon]  connections:1
+2025-11-26T05:12:19.960-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:12:19.961-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:12:19.961-0800 [clientcursormon]  connections:1
+2025-11-26T05:17:20.760-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:17:20.761-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:17:20.761-0800 [clientcursormon]  connections:1
+2025-11-26T05:22:21.553-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:22:21.553-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:22:21.553-0800 [clientcursormon]  connections:1
+2025-11-26T05:27:22.518-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:27:22.518-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:27:22.518-0800 [clientcursormon]  connections:1
+2025-11-26T05:32:23.364-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:32:23.365-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:32:23.365-0800 [clientcursormon]  connections:1
+2025-11-26T05:37:24.044-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:37:24.048-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:37:24.049-0800 [clientcursormon]  connections:1
+2025-11-26T05:42:24.776-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:42:24.776-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:42:24.776-0800 [clientcursormon]  connections:1
+2025-11-26T05:47:25.533-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:47:25.533-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:47:25.533-0800 [clientcursormon]  connections:1
+2025-11-26T05:52:26.356-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:52:26.356-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:52:26.356-0800 [clientcursormon]  connections:1
+2025-11-26T05:57:27.015-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T05:57:27.015-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T05:57:27.015-0800 [clientcursormon]  connections:1
+2025-11-26T06:02:27.672-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:02:27.672-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:02:27.672-0800 [clientcursormon]  connections:1
+2025-11-26T06:07:28.372-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:07:28.373-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:07:28.375-0800 [clientcursormon]  connections:1
+2025-11-26T06:12:29.132-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:12:29.132-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:12:29.132-0800 [clientcursormon]  connections:1
+2025-11-26T06:17:29.918-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:17:29.919-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:17:29.922-0800 [clientcursormon]  connections:1
+2025-11-26T06:22:30.693-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:22:30.694-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:22:30.694-0800 [clientcursormon]  connections:1
+2025-11-26T06:27:31.487-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:27:31.487-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:27:31.487-0800 [clientcursormon]  connections:1
+2025-11-26T06:32:32.302-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T06:32:32.302-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T06:32:32.302-0800 [clientcursormon]  connections:1
+2025-11-26T07:53:04.558-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T07:53:04.563-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T07:53:04.575-0800 [clientcursormon]  connections:1
+2025-11-26T07:58:05.248-0800 [clientcursormon] mem (MB) res:10 virt:4565
+2025-11-26T07:58:05.250-0800 [clientcursormon]  mapped (incl journal view):320
+2025-11-26T07:58:05.256-0800 [clientcursormon]  connections:1
