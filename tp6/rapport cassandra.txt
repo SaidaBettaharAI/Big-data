@@ -1,0 +1,121 @@
+1. إنشاء Keyspace
+
+CREATE KEYSPACE IF NOT EXISTS resto_NY
+WITH REPLICATION = {
+  'class' : 'SimpleStrategy',
+  'replication_factor' : 1
+};
+
+2. اختيار قاعدة البيانات للعمل عليها
+USE resto_NY;
+
+2. أوامر إنشاء الجداول
+
+3. إنشاء جدول Restaurant
+
+CREATE TABLE Restaurant (
+  id INT,
+  Name VARCHAR,
+  borough VARCHAR,
+  BuildingNum VARCHAR,
+  Street VARCHAR,
+  ZipCode INT,
+  Phone text,
+  CuisineType VARCHAR,
+  PRIMARY KEY (id)
+);
+
+
+
+4. إنشاء فهرس على CuisineType
+
+CREATE INDEX fk_Restaurant_cuisine
+ON Restaurant (CuisineType);
+
+
+5. إنشاء جدول Inspection
+
+CREATE TABLE Inspection (
+  idRestaurant INT,
+  InspectionDate date,
+  ViolationCode VARCHAR,
+  ViolationDescription VARCHAR,
+  CriticalFlag VARCHAR,
+  Score INT,
+  Grade VARCHAR,
+  PRIMARY KEY (idRestaurant, InspectionDate)
+);
+
+
+
+6. إنشاء فهرس على Grade
+
+CREATE INDEX fk_Inspection_Restaurant
+ON Inspection (Grade);
+
+3. أوامر استيراد البيانات
+
+7. استيراد بيانات Restaurant من CSV
+
+COPY Restaurant (id, name, borough, buildingnum, street, zipcode, phone, cuisinetype)
+FROM '/restaurants.csv' WITH DELIMITER=',';
+
+
+8. استيراد بيانات Inspection
+
+COPY Inspection (idrestaurant, inspectiondate, violationcode, violationdescription, criticalflag, score, grade)
+FROM '/restaurants_inspections.csv' WITH DELIMITER=',';
+
+4. أوامر الاستعلام CQL
+
+**9. قائمة جميع المطاعم**
+```sql
+SELECT * FROM Restaurant;
+
+10. استرجاع أسماء المطاعم فقط
+
+SELECT name FROM Restaurant;
+
+11. استرجاع اسم و borough لمطعم معين
+
+SELECT name, borough
+FROM Restaurant
+WHERE id = 41569764;
+
+12. استرجاع تواريخ ودرجات التفتيش
+
+SELECT inspectiondate, grade
+FROM Inspection
+WHERE idrestaurant = 41569764;
+
+13. مطاعم cuisine = French
+
+SELECT name
+FROM Restaurant
+WHERE cuisinetype = 'French' ALLOW FILTERING;
+
+14. مطاعم موجودة في BROOKLYN
+
+SELECT name
+FROM Restaurant
+WHERE borough = 'BROOKLYN' ALLOW FILTERING;
+
+15. نتائج التفتيش للمطعم 41569764 بشرط score ≥ 10
+
+SELECT grade, score
+FROM Inspection
+WHERE idrestaurant = 41569764 AND score >= 10 ALLOW FILTERING;
+
+
+16. درجات التفتيش score > 30 و grade ليس null
+
+SELECT grade
+FROM Inspection
+WHERE score > 30 AND grade IS NOT NULL ALLOW FILTERING;
+
+
+17. عدد النتائج للاستعلام السابق
+
+SELECT count(*)
+FROM Inspection
+WHERE score > 30 AND grade IS NOT NULL ALLOW FILTERING;
