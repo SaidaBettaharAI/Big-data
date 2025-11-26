@@ -1,0 +1,86 @@
+ملخص كامل لأوامر TP MongoDB + شرح استخدامها
+1) تشغيل السيرفر (MongoDB Server)
+ يستعمل لتشغيل قاعدة البيانات
+
+تكتبيه في CMD مستقل:
+
+mongod.exe --dbpath C:\data\db
+هذا لازم يبقى شــــغــــال دائمًا.
+
+2) تشغيل العميل (Mongo Shell)
+ يستعمل لتنفيذ الأوامر على قاعدة البيانات
+
+تكتبيه في CMD ثاني:
+mongo.exe
+
+ أوامر الـ TP (الجزء المهم)
+A) إنشاء قاعدة البيانات وتسميتها
+ نختار/نننشئ قاعدة بيانات اسمها info:
+use info
+إذا رجّع:
+
+switched to db info
+
+
+معناتها راهي خدامة.
+
+B) إنشاء Collection (مجموعة)
+✔ إنشاء collection اسمها produits :
+db.createCollection("produits")
+
+) إدخال الوثائق (Documents)
+ 1) Thinkpad X230
+db.produits.insert({
+  nom: "Thinkpad X230",
+  fabriquant: "Lenovo",
+  prix: 114358.74,
+  ultrabook: true,
+  options: ["Intel Core i5", "SSD", "Long life battery"]
+})
+
+ 2) Macbook Pro
+db.produits.insert({
+  nom: "Macbook Pro",
+  fabriquant: "Apple",
+  prix: 11435.99,
+  options: ["Intel Core i5", "Retina Display", "Long life battery"]
+})
+
+ 3) Macbook Air
+db.produits.insert({
+  nom: "Macbook Air",
+  fabriquant: "Apple",
+  prix: 125794.73,
+  ultrabook: true,
+  options: ["Intel Core i7", "SSD", "Long life battery"]
+
+
+db.produits.find().pretty()
+
+
+db.produits.findOne()
+
+
+db.produits.find({ _id: ObjectId("XXXXXXXXXXXX") })
+
+
+db.produits.find({ prix: { $gt: 13723 } }).pretty()
+
+db.produits.findOne({ ultrabook: true })
+
+
+db.produits.findOne({ nom: /Macbook/ })
+
+db.produits.find({ nom: /^Macbook/ })
+
+db.produits.remove({ fabriquant: "Apple" })
+
+db.produits.remove({ _id: ObjectId("XXXXXXXXXXXX") })
+
+
+show dbs
+
+✔ إظهار جميع المجموعات (Collections) في قاعدة البيانات:
+show collections
+
+
