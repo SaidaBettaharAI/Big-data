@@ -1,0 +1,45 @@
+ C:\Users\INFOLAB\Desktop\TP04Docker> docker build -t tp3-image:1.0 .
+[+] Building 20.8s (10/10) FINISHED                                                        docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                       0.1s
+ => => transferring dockerfile: 476B                                                                       0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                             2.2s
+ => [auth] library/python:pull token for registry-1.docker.io                                              0.0s
+ => [internal] load .dockerignore                                                                          0.1s
+ => => transferring context: 2B                                                                            0.0s
+ => [1/4] FROM docker.io/library/python:3.10@sha256:20ca17b2908b0202fc97510a082177357e7737f16dc231d7508b5  0.1s
+ => => resolve docker.io/library/python:3.10@sha256:20ca17b2908b0202fc97510a082177357e7737f16dc231d7508b5  0.1s
+ => [internal] load build context                                                                          0.0s
+ => => transferring context: 273B                                                                          0.0s
+ => CACHED [2/4] WORKDIR /app                                                                              0.0s
+ => CACHED [4/4] RUN pip install pandas numpy matplotlib scikit-learn                                      0.0s 
+ => => exporting layers                                                                                    0.0s 
+ => => exporting manifest sha256:71a8ae4960667c95211964d53219d0d60086ad5a4fea228f20dbc7c87d958874          0.0s 
+ => => exporting config sha256:b9d4fd2aea046daed8fb48a642abaefb7049a187da2286d88cc17fb215181227            0.0s 
+ => => exporting attestation manifest sha256:b7b08e3b48c9b825b561751a1f57257453675520458a1d3df904b70ca112  0.1s 
+ => => exporting manifest list sha256:90411e620c7f873901fb35debbf8ee2846db830239e706ec74762be8ba0cf643     0.0s 
+ => => naming to docker.io/library/tp3-image:1.0                                                           0.0s 
+ => => unpacking to docker.io/library/tp3-image:1.0                                                       17.4s 
+PS C:\Users\INFOLAB\Desktop\TP04Docker> 
+>> docker tag tp3-image:1.0 saidabettahar/tp3-image:1.0
+PS C:\Users\INFOLAB\Desktop\TP04Docker>
+>> docker push saidabettahar/tp3-image:1.0
+The push refers to repository [docker.io/saidabettahar/tp3-image]
+7dcc6cbf250a: Pushed
+7c40a3faff76: Pushed
+eae668646f44: Pushed
+035a93218c80: Pushed
+ff2e6e687b6c: Pushed
+53c88f1dfeb7: Pushed
+e76bb06b8627: Pushed
+0707b31c2286: Pushed
+0f7265030980: Pushed
+1.0: digest: sha256:90411e620c7f873901fb35debbf8ee2846db830239e706ec74762be8ba0cf643 size: 856
+PS C:\Users\INFOLAB\Desktop\TP04Docker> docker network create tp3-network
+966ed7b256753f603e4065b1a6e2f7ec8085b69e5a5557f10cbc93835a1eaeec
+PS C:\Users\INFOLAB\Desktop\TP04Docker> docker run -d --name tp3-container1 --network tp3-network -p 8881:8888 tp3-imagage:1.0
+>> docker run -d --name tp3-container2 --network tp3-network -p 8882:8888 tp3-image:1.0
+>> docker run -d --name tp3-container3 --network tp3-network -p 8883:8888 tp3-image:1.0
+31a8f2a0ef2caca4152813763294690418221b4a03a7d3970787df196d4e6104
+25339bed82a83f7f326d3119f9c2ed205443b93599b1e938f8d0bce730efecdc
+333bcc1aa47828760011b54caae177d715a1c3c544777f67b239374be04c7dcc
+PS C:\Users\INFOLAB\Desktop\TP04Docker>
