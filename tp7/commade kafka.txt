@@ -1,0 +1,25 @@
+فتح CMD والانتقال لمجلد Kafka
+cd C:\kafka_2.13-3.7.2
+إنشاء Topic في Kafka
+.\bin\windows\kafka-topics.bat --create --topic machines --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+للتحقق من القائمة:
+
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+ تشغيل Kafka Server
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+الانتقال لمجلد IOT (الذي يحتوي على Python Scripts)
+cd C:\kafka_2.13-3.7.2\IOT
+dir
+تأكدي من وجود الملفات:
+iot_producer.py
+iot_consumer.py
+
+تشغيل Producer (يرسل بيانات IoT)
+python iot_producer.py
+
+
+تشغيل Consumer (يعرض البيانات في الوقت الحقيقي)
+python iot_consumer.py
